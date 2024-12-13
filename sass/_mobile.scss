@@ -1,0 +1,157 @@
+
+
+//tablets and smaller
+@media(max-width:768px){
+ #header{
+    &__home{
+        height: 30rem;
+        .header-content{
+            padding-top: 7rem;
+        }
+        h1{
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+    }
+ }
+
+ #home__a .skills,#home__b .profile,#home__c .process{
+    grid-template-columns: repeat(2,1fr);
+
+ }
+
+ #projects{
+    .items{
+        grid-template-columns:  repeat(2,1fr);
+    }
+ }
+
+ #main-footer{
+    height: 8rem;
+    .footer-content{
+        flex-direction: column;
+        padding: 1rem;
+        height: 5rem;
+
+        .social{
+            padding: 1rem;
+          
+        }
+    }
+ }
+}
+
+//mobile
+@media(max-width:576px){
+    *{
+        box-sizing: border-box;
+    }
+    .main-nav{
+        flex-direction: column;
+        align-items: center;
+        li{
+            padding: 1rem;
+        }
+    }
+    #header{
+        &__home{  
+            height: 10rem;
+            border-bottom: 2px solid $primary-color;
+            background-position: 20% 30%;
+            .header-content{
+                display: none;
+            }
+           
+           
+        }
+
+        &__inner{
+            height: 10rem;
+        }
+      
+     }
+
+
+     #home__a .skills,#home__b .profile,#home__c .process{
+        grid-template-columns: repeat(1,1fr);
+    
+     }
+
+     #main-footer{
+        height: 8rem;
+        .footer-content{
+            flex-direction: column;
+            padding: 1rem;
+            height: 5rem;
+
+            .social{
+                padding: 1rem;
+              
+            }
+        }
+     }
+
+
+     #about{
+        &-a{
+            .info{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-c{
+            display: none;
+        }
+     }
+     #contact-b .contact-info{
+        grid-template-columns:  1fr; 
+     }
+     #projects{
+        .items{
+            grid-template-columns:  1fr;
+        }
+     }
+
+    
+     #contact{
+
+        &-a{
+
+            .form-fields{
+                grid-template-areas:
+                'name name'
+                'email email'
+                'subject subject'
+                'phone phone'
+                'message message'
+                'button button' ;
+            }
+
+        }
+        &-b{
+            div{
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid black;
+
+
+                &:last-child{
+                    border: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+                
+            }
+        }
+     }
+
+     .lead{
+
+        margin-top: 15px;
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+        word-spacing: 1px;
+    }
+    
+     
+}  
